@@ -34,13 +34,14 @@ nnoremap <leader>s :Startify<CR>
 "" Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-set background=light
+set background=dark
+set t_Co=256
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
 colorscheme solarized
 
-"" No more tildes!
+" No more tildes!
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 
 
@@ -73,9 +74,9 @@ set clipboard=unnamed
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
@@ -102,10 +103,11 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Denite
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>f :Denite file_rec<cr>
-call denite#custom#option('default', {
-      \ 'prompt': '>>'
-      \ })
+" nnoremap <leader>f :Denite file_rec<cr>
+" call denite#custom#option('default', {
+"       \ 'prompt': '>>'
+"       \ })
+nnoremap <leader>f :CtrlP<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Deoplete
@@ -125,5 +127,5 @@ let g:ctrlp_clear_cache_on_exit = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 " set statusline=%<\ %{mode()}\ \|\ %F%=\ %{&fileformat}\ \|\ %{&fileencoding}\ \|\ %{&filetype}\ \|\ %p%%\ \|\ LN\ %l:%c\ 
-set statusline=\ %F%=\ %{&fileformat}\ \ %{&fileencoding}\ \ %{&filetype}\ \ %p%%\ \ LN\ %l:%c\ 
+set statusline=\ %m\ %F%=\ %{&fileformat}\ \ %{&fileencoding}\ \ %{&filetype}\ \ %p%%\ \ LN\ %l:%c\ 
 
