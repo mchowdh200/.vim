@@ -68,7 +68,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
+set clipboard=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Syntastic
@@ -96,7 +96,7 @@ set smartcase
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Supertab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
