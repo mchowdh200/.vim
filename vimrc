@@ -56,6 +56,7 @@ set expandtab
 set autoindent
 set fileformat=unix
 set nowrap
+autocmd FileType * setlocal indentkeys+=!<Tab>
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
