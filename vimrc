@@ -56,7 +56,8 @@ set expandtab
 set autoindent
 set fileformat=unix
 set nowrap
-autocmd FileType * setlocal indentkeys+=!<Tab>
+" autocmd FileType * setlocal indentkeys+=!<Tab>
+inoremap <S-Tab> <C-d>
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -71,19 +72,7 @@ set incsearch
 set ignorecase
 set smartcase
 set clipboard=unnamed
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
+set autochdir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Python Settings
@@ -108,19 +97,20 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 " call denite#custom#option('default', {
 "       \ 'prompt': '>>'
 "       \ })
-nnoremap <leader>f :CtrlP<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Deoplete
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:deoplete#enable_at_startup = 1
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_clear_cache_on_exit = 0
+" nnoremap <leader>f :CtrlP<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Ale
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_enter = 0
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -128,5 +118,5 @@ let g:ctrlp_clear_cache_on_exit = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 " set statusline=%<\ %{mode()}\ \|\ %F%=\ %{&fileformat}\ \|\ %{&fileencoding}\ \|\ %{&filetype}\ \|\ %p%%\ \|\ LN\ %l:%c\ 
-set statusline=\ %m\ %F%=\ %{&fileformat}\ \ %{&fileencoding}\ \ %{&filetype}\ \ %p%%\ \ LN\ %l:%c\ 
+set statusline=\ %m\ %f%=\ %{&fileformat}\ \ %{&fileencoding}\ \ %{&filetype}\ \ %p%%\ \ LN\ %l:%c\ 
 
