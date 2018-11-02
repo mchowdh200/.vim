@@ -1,5 +1,25 @@
 set nocompatible
-execute pathogen#infect()
+
+" Bootstrap plugin manager
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/bundle')
+Plug 'w0rp/ale'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+Plug 'maralla/completor.vim'
+" Plug 'ervandew/supertab'
+Plug 'altercation/vim-colors-solarized'
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-surround'
+" Plug 'davidhalter/jedi-vim'
+call plug#end()
+
+" execute pathogen#infect()
 filetype plugin indent on
 
 "" change cursor shape in terminal depending on mode
@@ -87,8 +107,12 @@ autocmd FileType tex,latex nnoremap <leader>c :!pdflatex %<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Jedi
+"" Completor
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd VimEnter * CompletorEnable
+" let g:completor_auto_trigger = 1
+let g:completor_python_binary = 'python3'
+inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,6 +140,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 "" Ale
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_cache_executable_check_failures = 1
 " let g:ale_lint_on_enter = 0
 
 
