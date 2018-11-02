@@ -93,6 +93,7 @@ set ignorecase
 set smartcase
 set clipboard=unnamed
 set autochdir
+set splitbelow
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Python Settings
@@ -112,6 +113,7 @@ autocmd FileType tex,latex nnoremap <leader>c :!pdflatex %<cr>
 " autocmd VimEnter * CompletorEnable
 " let g:completor_auto_trigger = 1
 let g:completor_python_binary = 'python3'
+let g:completor_doc_position = 'bottom'
 inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
 
