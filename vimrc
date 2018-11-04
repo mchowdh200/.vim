@@ -13,10 +13,15 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'maralla/completor.vim'
 " Plug 'ervandew/supertab'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'chriskempson/base16-vim'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
-" Plug 'davidhalter/jedi-vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " execute pathogen#infect()
@@ -55,11 +60,11 @@ nnoremap <leader>s :Startify<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
-set t_Co=256
+set termguicolors
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme solarized
+colorscheme space-vim-dark
 
 " No more tildes!
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
@@ -114,7 +119,7 @@ autocmd FileType tex,latex nnoremap <leader>c :!pdflatex %<cr>
 " let g:completor_auto_trigger = 1
 let g:completor_python_binary = 'python3'
 let g:completor_doc_position = 'bottom'
-inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
+"inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -132,10 +137,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 "       \ })
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" CtrlP
+"" FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_clear_cache_on_exit = 0
-" nnoremap <leader>f :CtrlP<cr>
+nnoremap <leader>f :Files<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
