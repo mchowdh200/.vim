@@ -7,21 +7,41 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Plugin stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/bundle')
-Plug 'w0rp/ale'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-commentary'
-Plug 'maralla/completor.vim'
-" Plug 'ervandew/supertab'
-" Plug 'altercation/vim-colors-solarized'
-Plug 'lifepillar/vim-solarized8'
-Plug 'liuchengxu/space-vim-dark'
-Plug 'chriskempson/base16-vim'
 Plug 'mhinz/vim-startify'
+
+" Basic insert mode stuff -----------------------
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+
+" Syntax checking and code completion -----------
+Plug 'w0rp/ale'
+Plug 'maralla/completor.vim'
+Plug 'ervandew/supertab'
+
+" Fuzzy completion ------------------------------
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'ervandew/supertab'
+
+" Python plugins --------------------------------
+" Plug 'vim-python/python-syntax'
+" Plug 'hynek/vim-python-pep8-indent'
+Plug 'vim-scripts/indentpython.vim'
+
+" Themes ----------------------------------------
+Plug 'lifepillar/vim-solarized8'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'rakr/vim-one'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'junegunn/seoul256.vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'tyrannicaltoucan/vim-quantum'
+
 call plug#end()
 
 " execute pathogen#infect()
@@ -64,7 +84,7 @@ set termguicolors
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme space-vim-dark
+colorscheme solarized8
 
 " No more tildes!
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
@@ -147,6 +167,7 @@ nnoremap <leader>f :Files<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_cache_executable_check_failures = 1
+let g:ale_linters = {'cpp':[]}
 " let g:ale_lint_on_enter = 0
 
 
