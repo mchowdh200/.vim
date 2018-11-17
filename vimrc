@@ -41,6 +41,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 call plug#end()
 
@@ -84,7 +85,7 @@ set termguicolors
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme solarized8
+colorscheme Tomorrow-Night-Bright
 
 " No more tildes!
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
