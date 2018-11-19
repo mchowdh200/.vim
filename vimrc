@@ -85,6 +85,7 @@ nnoremap <leader>s :Startify<CR>
 syntax on
 set background=dark
 set termguicolors
+let g:material_theme_style='dark'
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
