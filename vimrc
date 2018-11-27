@@ -42,6 +42,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'chriskempson/base16-vim'
 Plug 'kaicataldo/material.vim'
 Plug 'nightsense/stellarized'
 Plug 'Heorhiy/VisualStudioDark.vim'
@@ -89,7 +90,8 @@ let g:material_theme_style='dark'
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme Tomorrow-Night-Bright
+colorscheme base16-chalk
+highlight Comment cterm=italic
 
 " No more tildes!
 " hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
