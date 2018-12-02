@@ -90,7 +90,7 @@ let g:material_theme_style='dark'
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme base16-chalk
+colorscheme base16-material-phd
 highlight Comment cterm=italic
 
 " No more tildes!
