@@ -63,6 +63,10 @@ let &t_EI = "\<Esc>[2 q"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap jk <Esc>
 nnoremap <space> :
+nnoremap <up> <C-w>+
+nnoremap <down> <C-w>-
+nnoremap <left> <C-w><
+nnoremap <right> <C-w>>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -80,6 +84,7 @@ nnoremap <leader>\ :noh<CR>
 nnoremap <leader>s :Startify<CR>
 
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,7 +95,7 @@ let g:material_theme_style='dark'
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme base16-material-phd
+colorscheme base16-phd
 highlight Comment cterm=italic
 
 " No more tildes!
@@ -100,6 +105,7 @@ highlight Comment cterm=italic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Editor stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set mouse=a
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
