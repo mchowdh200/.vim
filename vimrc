@@ -95,7 +95,7 @@ let g:material_theme_style='dark'
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme base16-phd
+colorscheme base16-eighties
 highlight Comment cterm=italic
 
 " No more tildes!
@@ -142,6 +142,7 @@ set splitbelow
 "" Latex settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType tex,latex nnoremap <leader>c :!pdflatex %<cr>
+autocmd FileType tex,latex nnoremap <leader>b :!bibtex %:r<cr>
 
 
 
