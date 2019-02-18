@@ -89,14 +89,21 @@ nnoremap <leader>s :Startify<CR>
 "" Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-set background=dark
+set background=light
 set termguicolors
 let g:material_theme_style='dark'
 let g:solarized_underline = 1
 let g:solarized_italic = 1
 let g:solarized_bold = 1
-colorscheme base16-eighties
+colorscheme PaperColor
 highlight Comment cterm=italic
+
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+set guicursor+=n-v-c:blinkon0
+
 
 " No more tildes!
 " hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
