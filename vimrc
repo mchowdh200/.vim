@@ -89,7 +89,7 @@ nnoremap <leader>s :Startify<CR>
 "" Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-set background=light
+set background=dark
 set termguicolors
 let g:material_theme_style='dark'
 let g:solarized_underline = 1
