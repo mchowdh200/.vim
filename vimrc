@@ -33,6 +33,10 @@ Plug 'junegunn/fzf.vim'
 " Plug 'hynek/vim-python-pep8-indent'
 Plug 'vim-scripts/indentpython.vim'
 
+" Editor stuff ----------------------------------
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 " Themes ----------------------------------------
 Plug 'lifepillar/vim-solarized8'
 Plug 'liuchengxu/space-vim-dark'
@@ -139,6 +143,19 @@ set smartcase
 set clipboard=unnamed
 set autochdir
 set splitbelow
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Focus mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:goyo_width=80
+let g:goyo_height=95
+
+let g:limelight_default_coefficient = 0.7
+let g:limelight_paragraph_span = 0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Python Settings
