@@ -19,6 +19,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
+" Language plugins ------------------------------
+" Plug 'sheerun/vim-polyglot'
+
 " Syntax checking and code completion -----------
 Plug 'w0rp/ale'
 Plug 'maralla/completor.vim'
@@ -36,6 +39,8 @@ Plug 'vim-scripts/indentpython.vim'
 " Editor stuff ----------------------------------
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'majutsushi/tagbar'
+
 
 " Themes ----------------------------------------
 Plug 'lifepillar/vim-solarized8'
@@ -46,10 +51,9 @@ Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'chriskempson/base16-vim'
 Plug 'kaicataldo/material.vim'
 Plug 'nightsense/stellarized'
-Plug 'Heorhiy/VisualStudioDark.vim'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 
 call plug#end()
 
@@ -95,10 +99,6 @@ nnoremap <leader>s :Startify<CR>
 syntax on
 set background=dark
 set termguicolors
-let g:material_theme_style='dark'
-let g:solarized_underline = 1
-let g:solarized_italic = 1
-let g:solarized_bold = 1
 colorscheme PaperColor
 highlight Comment cterm=italic
 
@@ -120,7 +120,7 @@ set mouse=a
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=79
+set textwidth=100
 set expandtab
 set autoindent
 set fileformat=unix
@@ -205,7 +205,8 @@ nnoremap <leader>f :Files<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_cache_executable_check_failures = 1
-let g:ale_linters = {'cpp':[]}
+let g:ale_linters = {'cpp':[], 'python':['pylint']}
+let g:ale_python_pylint_executable='pylint'
 " let g:ale_lint_on_enter = 0
 
 
