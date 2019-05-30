@@ -22,6 +22,9 @@ Plug 'tpope/vim-commentary'
 " Language plugins ------------------------------
 " Plug 'sheerun/vim-polyglot'
 
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+
 " Syntax checking and code completion -----------
 Plug 'w0rp/ale'
 Plug 'maralla/completor.vim'
@@ -54,7 +57,7 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'kaicataldo/material.vim'
 Plug 'nightsense/stellarized'
 Plug 'ErichDonGubler/vim-sublime-monokai'
-
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 call plug#end()
 
 " execute pathogen#infect()
@@ -216,5 +219,5 @@ let g:ale_python_pylint_executable='pylint'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 " set statusline=%<\ %{mode()}\ \|\ %F%=\ %{&fileformat}\ \|\ %{&fileencoding}\ \|\ %{&filetype}\ \|\ %p%%\ \|\ LN\ %l:%c\ 
-set statusline=\ %m\ %f%=\ %{&fileformat}\ \ %{&fileencoding}\ \ %{&filetype}\ \ %p%%\ \ LN\ %l:%c\ 
+set statusline=\ %m\ %f%=\ %{FugitiveStatusline()}\ %{&fileformat}\ \ %{&fileencoding}\ \ %{&filetype}\ \ %p%%\ \ LN\ %l:%c\ 
 
