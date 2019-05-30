@@ -22,8 +22,12 @@ Plug 'tpope/vim-commentary'
 " Language plugins ------------------------------
 " Plug 'sheerun/vim-polyglot'
 
-" Git wrapper
+" Git wrapper -----------------------------------
 Plug 'tpope/vim-fugitive'
+
+" Dispatch --------------------------------------
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
 
 " Syntax checking and code completion -----------
 Plug 'w0rp/ale'
