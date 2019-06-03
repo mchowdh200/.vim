@@ -29,8 +29,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'radenling/vim-dispatch-neovim'
 
-" Syntax checking and code completion -----------
+" Syntax checking -------------------------------
 Plug 'w0rp/ale'
+
+" Autocompletions -------------------------------
 Plug 'maralla/completor.vim'
 Plug 'ervandew/supertab'
 
@@ -82,6 +84,7 @@ nnoremap <up> <C-w>+
 nnoremap <down> <C-w>-
 nnoremap <left> <C-w><
 nnoremap <right> <C-w>>
+nnoremap \ :pclose<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -176,15 +179,14 @@ autocmd FileType tex,latex nnoremap <leader>c :!pdflatex %<cr>
 autocmd FileType tex,latex nnoremap <leader>b :!bibtex %:r<cr>
 
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Completor
+"" Autocomplete settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmd VimEnter * CompletorEnable
-" let g:completor_auto_trigger = 1
+let g:completor_auto_trigger = 1
 let g:completor_python_binary = 'python3'
 let g:completor_doc_position = 'bottom'
-"inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
+let g:completor_auto_close_doc = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -192,14 +194,6 @@ let g:completor_doc_position = 'bottom'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Denite
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap <leader>f :Denite file_rec<cr>
-" call denite#custom#option('default', {
-"       \ 'prompt': '>>'
-"       \ })
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" FZF
