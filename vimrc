@@ -16,6 +16,7 @@ Plug 'mhinz/vim-startify'
 
 " Basic insert mode stuff -----------------------
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
@@ -44,12 +45,16 @@ Plug 'junegunn/fzf.vim'
 " Plug 'vim-python/python-syntax'
 " Plug 'hynek/vim-python-pep8-indent'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/pydoc.vim'
+Plug 'fisadev/vim-isort'
 
 " Editor stuff ----------------------------------
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'majutsushi/tagbar'
 
+" Tmux ------------------------------------------
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Themes ----------------------------------------
 Plug 'lifepillar/vim-solarized8'
@@ -152,6 +157,7 @@ set ignorecase
 set smartcase
 set clipboard=unnamed
 set autochdir
+set autoread
 set splitbelow
 
 
