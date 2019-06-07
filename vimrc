@@ -202,7 +202,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 "" FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>f :Files<cr>
-
+nnoremap <leader>g :GitFiles<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Ale
