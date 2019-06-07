@@ -61,12 +61,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'rakr/vim-one'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'junegunn/seoul256.vim'
-Plug 'reedes/vim-colors-pencil'
-Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'kaicataldo/material.vim'
-Plug 'nightsense/stellarized'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 call plug#end()
@@ -114,7 +109,9 @@ nnoremap <leader>s :Startify<CR>
 syntax on
 set background=dark
 set termguicolors
-colorscheme PaperColor
+let g:solarized_extra_hi_groups=1
+colorscheme solarized8
+" colorscheme PaperColor
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
