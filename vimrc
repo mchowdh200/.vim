@@ -64,7 +64,10 @@ Plug 'rakr/vim-one'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'nightsense/snow'
+Plug 'nightsense/cosmic_latte'
+Plug 'nightsense/carbonized'
+Plug 'nightsense/stellarized'
 call plug#end()
 
 " execute pathogen#infect()
@@ -111,8 +114,9 @@ syntax on
 set background=dark
 set termguicolors
 let g:solarized_extra_hi_groups=1
-colorscheme solarized8
+" colorscheme solarized8
 " colorscheme PaperColor
+colorscheme stellarized
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
