@@ -158,7 +158,7 @@ set incsearch
 set ignorecase
 set smartcase
 set clipboard=unnamed
-set autochdir
+" set autochdir
 set autoread
 set splitbelow
 
