@@ -116,7 +116,7 @@ set termguicolors
 let g:solarized_extra_hi_groups=1
 " colorscheme solarized8
 " colorscheme PaperColor
-colorscheme stellarized
+colorscheme cosmic_latte
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
