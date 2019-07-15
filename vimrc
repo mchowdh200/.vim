@@ -53,6 +53,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mtth/scratch.vim'
+Plug 'jceb/vim-orgmode'
 
 " Tmux ------------------------------------------
 Plug 'tmux-plugins/vim-tmux-focus-events'
