@@ -158,7 +158,9 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set clipboard=unnamed
+if $TMUX
+    set clipboard=unnamed
+endif
 " set autochdir
 set autoread
 set splitbelow
