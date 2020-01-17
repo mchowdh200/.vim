@@ -63,6 +63,8 @@ Plug 'jceb/vim-orgmode'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Themes ----------------------------------------
+Plug 'michaelmalick/vim-colors-bluedrake'
+Plug 'fxn/vim-monochrome'
 Plug 'arcticicestudio/nord-vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'liuchengxu/space-vim-dark'
