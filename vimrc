@@ -48,6 +48,10 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-scripts/pydoc.vim'
 Plug 'fisadev/vim-isort'
 
+" Haskell plugins -------------------------------
+"
+Plug 'neovimhaskell/haskell-vim'
+
 " Editor stuff ----------------------------------
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -59,6 +63,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Themes ----------------------------------------
+Plug 'arcticicestudio/nord-vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'rakr/vim-one'
@@ -74,11 +79,21 @@ call plug#end()
 " execute pathogen#infect()
 filetype plugin indent on
 
-"" change cursor shape in terminal depending on mode
+" vim hardcodes background color erase even if the terminfo file does
+" not contain bce (not to mention that libvte based terminals
+" incorrectly contain bce in their terminfo files). This causes
+" incorrect background rendering when using a color theme with a
+" background color.
+let &t_ut=''
+
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
+" if exists('$TMUX')
+"     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+"     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Remaps
@@ -115,9 +130,7 @@ syntax on
 set background=dark
 set termguicolors
 let g:solarized_extra_hi_groups=1
-" colorscheme solarized8
-" colorscheme PaperColor
-colorscheme cosmic_latte
+colorscheme nord
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
@@ -171,7 +184,7 @@ set splitbelow
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-let g:goyo_width=80
+let g:goyo_width=100
 let g:goyo_height=95
 
 let g:limelight_default_coefficient = 0.7
@@ -181,6 +194,22 @@ let g:limelight_paragraph_span = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Python Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Haskell Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:haskell_classic_highlighting = 1
+let g:haskell_indent_if = 3
+let g:haskell_indent_case = 2
+let g:haskell_indent_let = 4
+let g:haskell_indent_where = 6
+let g:haskell_indent_before_where = 2
+let g:haskell_indent_after_bare_where = 2
+let g:haskell_indent_do = 3
+let g:haskell_indent_in = 1
+let g:haskell_indent_guard = 2
+let g:haskell_indent_case_alternative = 1
+let g:cabal_indent_section = 2
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
