@@ -51,6 +51,7 @@ Plug 'fisadev/vim-isort'
 " Haskell plugins -------------------------------
 "
 Plug 'neovimhaskell/haskell-vim'
+Plug 'eagletmt/neco-ghc'
 
 " Editor stuff ----------------------------------
 Plug 'junegunn/goyo.vim'
@@ -173,9 +174,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-if $TMUX
-    set clipboard=unnamed
-endif
+set clipboard=unnamedplus
 " set autochdir
 set autoread
 set splitbelow
