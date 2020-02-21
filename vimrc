@@ -77,6 +77,8 @@ Plug 'nightsense/snow'
 Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/carbonized'
 Plug 'nightsense/stellarized'
+Plug 'jnurmine/Zenburn'
+Plug 'wadackel/vim-dogrun'
 call plug#end()
 
 " execute pathogen#infect()
@@ -133,7 +135,7 @@ syntax on
 set background=dark
 set termguicolors
 let g:solarized_extra_hi_groups=1
-colorscheme solarized8
+colorscheme bluedrake
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
