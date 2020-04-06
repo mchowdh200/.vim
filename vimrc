@@ -110,6 +110,7 @@ nnoremap <down> <C-w>-
 nnoremap <left> <C-w><
 nnoremap <right> <C-w>>
 nnoremap \ :pclose<CR>
+tnoremap jk <C-\><C-n>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -135,7 +136,7 @@ syntax on
 set background=dark
 set termguicolors
 let g:solarized_extra_hi_groups=1
-colorscheme bluedrake
+colorscheme solarized8
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
