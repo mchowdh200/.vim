@@ -110,6 +110,7 @@ nnoremap <down> <C-w>-
 nnoremap <left> <C-w><
 nnoremap <right> <C-w>>
 nnoremap \ :pclose<CR>
+tnoremap jk <C-\><C-n>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
