@@ -133,10 +133,10 @@ nnoremap <leader>s :Startify<CR>
 "" Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-set background=light
+set background=dark
 set termguicolors
 let g:solarized_extra_hi_groups=1
-colorscheme PaperColor
+colorscheme zenburn
 highlight Comment cterm=italic
 
 set guioptions-=m  "remove menu bar
