@@ -59,6 +59,11 @@ Plug 'junegunn/limelight.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mtth/scratch.vim'
 Plug 'jceb/vim-orgmode'
+Plug 'ShaiberAlon/snakemake-vim'
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.rules set syntax=snakemake
+au BufNewFile,BufRead *.snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
 
 " Tmux ------------------------------------------
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -157,7 +162,7 @@ set mouse=a
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=100
+" set textwidth=100
 set expandtab
 set autoindent
 set fileformat=unix
